@@ -5,7 +5,7 @@ $(function () {
     $('.navbar-collapse').collapse('hide')
   })
 
-  // let $navbarNav = $('.hide_menu')
+  let nav = $('nav')
   // let $inicio_btn = $('#inicio_btn')
 
   // let $btn_one = $('#button_one')
@@ -21,6 +21,13 @@ $(function () {
   $('.desc_two').toggle()
   $('.desc_three').toggle()
   $modal.toggle()
+
+  // SCROLL
+  $(window).scroll(function (event) {
+    var scroll = $(window).scrollTop()
+    if (scroll > 300) $(nav).removeClass('backTransparent')
+    else $(nav).addClass('backTransparent')
+  })
 
   // // $inicio_btn.on('click', () => {
   // //   $navbarNav.toggleClass('show')
