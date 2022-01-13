@@ -13,25 +13,30 @@ $(function () {
   // let $btn_two = $('#button_two')
   // let $btn_three = $('#button_three')
   let $modal = $('.my_modal')
-  let $open_modal_btn = $('.open_modal')
-  let $close_modaL_btn = $('.close_modal')
+  // let $open_modal_btn = $('.open_modal')
+  let close_modaL_btn = $('.close_modal')
   let $check_email_btn = $('.check_email')
   let $input_email = $('#input_email')
 
-  $('.desc_one').toggle()
-  $('.desc_two').toggle()
-  $('.desc_three').toggle()
+  // $('.desc_one').toggle()
+  // $('.desc_two').toggle()
+  // $('.desc_three').toggle()
   // $modal.toggle()
 
-  // SCROLL
+  // SCROLL DETECT
   $(window).scroll(function (event) {
     var scroll = $(window).scrollTop()
     if (scroll > 300) $(nav).removeClass('backTransparent')
     else $(nav).addClass('backTransparent')
   })
 
-  send_btn.click(() => {
-    $navbarNav.toggleClass('show')
+  send_btn.click((event) => {
+    event.stopPropagation()
+    $('.my_modal').toggleClass('hide')
+  })
+
+  close_modaL_btn.click((event) => {
+    $('.my_modal').toggleClass('hide')
   })
 
   // // $inicio_btn.on('click', () => {
@@ -62,14 +67,14 @@ $(function () {
   //   $input_email.val('')
   // })
 
-  // $check_email_btn.on('click', () => {
-  //   var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i
-  //   if (testEmail.test($input_email.val())) {
-  //     alert(`Your email was sended. Thanks!`)
-  //     $('.my_modal').toggle()
-  //     $input_email.val('')
-  //   } else {
-  //     alert(`Please enter a valid email`)
-  //   }
-  // })
+  $check_email_btn.on('click', () => {
+    var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i
+    if (testEmail.test($input_email.val())) {
+      alert(`Your email was sended. Thanks!`)
+      $('.my_modal').toggle()
+      $input_email.val('')
+    } else {
+      alert(`Please enter a valid email`)
+    }
+  })
 })
