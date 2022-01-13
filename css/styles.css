@@ -187,6 +187,13 @@ footer i {
   display: none;
 }
 
+.modal_two .my_info {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  background: black;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 480px) {
 
@@ -333,4 +340,9 @@ footer i {
   color: #ff4800 !important;
   text-shadow: 0 0 10px #ff4800, 0 0 40px #ff4800, 0 0 80px #ff4800;
   background: transparent;
+}
+
+.orange {
+  color: #ff4800 !important;
+  text-shadow: 0 0 10px #ff4800, 0 0 40px #ff4800, 0 0 80px #ff4800;
 }

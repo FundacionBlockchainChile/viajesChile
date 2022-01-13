@@ -14,7 +14,8 @@ $(function () {
   // let $btn_three = $('#button_three')
   let $modal = $('.my_modal')
   // let $open_modal_btn = $('.open_modal')
-  let close_modaL_btn = $('.close_modal')
+  let close_modaL_one_btn = $('.modal_one .close_modal')
+  let close_modaL_two_btn = $('.modal_two .close_modal')
   let $check_email_btn = $('.check_email')
   let $input_email = $('#input_email')
 
@@ -32,11 +33,15 @@ $(function () {
 
   send_btn.click((event) => {
     event.stopPropagation()
-    $('.my_modal').toggleClass('hide')
+    $('.modal_one').toggleClass('hide')
   })
 
-  close_modaL_btn.click((event) => {
-    $('.my_modal').toggleClass('hide')
+  close_modaL_one_btn.click((event) => {
+    $('.modal_one').toggleClass('hide')
+  })
+
+  close_modaL_two_btn.click((event) => {
+    $('.modal_two').toggleClass('hide')
   })
 
   // // $inicio_btn.on('click', () => {
@@ -70,9 +75,9 @@ $(function () {
   $check_email_btn.on('click', () => {
     var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i
     if (testEmail.test($input_email.val())) {
-      alert(`Your email was sended. Thanks!`)
-      $('.my_modal').toggle()
+      $('.modal_one').toggleClass('hide')
       $input_email.val('')
+      $('.modal_two').toggleClass('hide')
     } else {
       alert(`Please enter a valid email`)
     }
