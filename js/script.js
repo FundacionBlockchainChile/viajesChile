@@ -6,27 +6,32 @@ $(function () {
   })
 
   let nav = $('nav')
+  let send_btn = $('#send_btn')
   // let $inicio_btn = $('#inicio_btn')
 
   // let $btn_one = $('#button_one')
   // let $btn_two = $('#button_two')
   // let $btn_three = $('#button_three')
   let $modal = $('.my_modal')
-  // let $open_modal_btn = $('.open_modal')
-  // let $close_modaL_btn = $('.close_modal')
-  // let $check_email_btn = $('.check_email')
-  // let $input_email = $('#input_email')
+  let $open_modal_btn = $('.open_modal')
+  let $close_modaL_btn = $('.close_modal')
+  let $check_email_btn = $('.check_email')
+  let $input_email = $('#input_email')
 
   $('.desc_one').toggle()
   $('.desc_two').toggle()
   $('.desc_three').toggle()
-  $modal.toggle()
+  // $modal.toggle()
 
   // SCROLL
   $(window).scroll(function (event) {
     var scroll = $(window).scrollTop()
     if (scroll > 300) $(nav).removeClass('backTransparent')
     else $(nav).addClass('backTransparent')
+  })
+
+  send_btn.click(() => {
+    $navbarNav.toggleClass('show')
   })
 
   // // $inicio_btn.on('click', () => {
