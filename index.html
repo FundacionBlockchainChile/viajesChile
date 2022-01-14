@@ -68,9 +68,10 @@
     </nav>
 
     <!-- MODAL -->
-    <div class="my_modal modal_one my_column hide">
+    <div class="my_column my_modal modal_one hide">
       <div class="my_info my_column">
         <p class="close_modal">X</p>
+        <img src="./assets/img/viajes.svg" alt="" />
         <h4>Viajes Chile</h4>
         <p>Please register your email</p>
         <input id="input_email" type="email" placeholder="Please enter email" />
@@ -80,7 +81,7 @@
       </div>
     </div>
 
-    <div class="my_modal modal_two my_column hide">
+    <div class="my_column my_modal modal_two hide">
       <div class="my_info my_column">
         <p class="close_modal">X</p>
         <h1 class="orange">Get Ready!</h1>
@@ -274,10 +275,11 @@
           <label for="">Mensaje</label>
           <textarea type="textarea" placeholder="Escribe tu mensaje"></textarea>
           <button
-            id="send_btn"
+            id="form_btn"
+            type="button"
             class="btn orange_hover"
             data-toggle="tooltip"
-            data-placement="top"
+            data-placement="right"
             title="Listo para Comenzar a Viajar?"
           >
             Enviar

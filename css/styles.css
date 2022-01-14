@@ -45,6 +45,12 @@ section:before {
   border-bottom: 1px solid #ff4800;
 }
 
+.navbar:hover img {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
 .backTransparent {
   background: transparent !important;
   border-bottom: 1px solid transparent;
@@ -54,6 +60,27 @@ section:before {
   height: 45px;
   width: 45px;
   margin: 2 8px;
+}
+
+.navbar img:hover {}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 /* CARUSEL */
@@ -146,6 +173,11 @@ footer i {
   background: rgba(0, 0, 0, 0.8);
 }
 
+.modal_one img {
+  width: 100px;
+  height: 100px;
+}
+
 .close_modal {
   position: absolute;
   top: 170px;
@@ -187,9 +219,13 @@ footer i {
   display: none;
 }
 
-.modal_two .my_info {
+.modal_two {
+  background: black;
   width: 100vw;
-  height: 100vh;
+  height: 100vh
+}
+
+.modal_two .my_info {
   border-radius: 0;
   background: black;
 }
